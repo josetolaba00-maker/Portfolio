@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ignacio Tolaba — Paid Media Analyst & Digital Marketing Specialist. Performance marketing, audience strategy, analytics and digital growth.">
+<title>Ignacio Tolaba — Paid Media & Digital Marketing</title>
+<style>
+:root{
+  --bg:#07110f; --bg2:#0b1916; --card:rgba(255,255,255,.055);
+  --text:#f4f7f4; --muted:#a7b5b0; --line:rgba(255,255,255,.11);
+  --accent:#a8ff6a; --accent2:#63e6be; --dark:#0a1512;
+  --shadow:0 25px 80px rgba(0,0,0,.35); --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:
+radial-gradient(circle at 80% 10%,rgba(168,255,106,.12),transparent 28rem),
+radial-gradient(circle at 10% 35%,rgba(99,230,190,.08),transparent 25rem),var(--bg);
+color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+nav{position:fixed;z-index:20;top:18px;left:50%;transform:translateX(-50%);width:min(1050px,calc(100% - 30px));
+padding:11px 14px;border:1px solid var(--line);background:rgba(7,17,15,.72);backdrop-filter:blur(18px);border-radius:999px;
+display:flex;align-items:center;justify-content:space-between;box-shadow:var(--shadow)}
+.logo{font-weight:800;letter-spacing:-.04em;padding:7px 10px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:4px}
+.navlinks a{padding:8px 13px;border-radius:999px;color:var(--muted);font-size:14px;transition:.25s}
+.navlinks a:hover{background:rgba(255,255,255,.07);color:#fff}
+.navcta{background:var(--accent);color:#07110f!important;font-weight:800!important}
+.hero{min-height:100vh;display:grid;place-items:center;padding:150px 0 90px;position:relative}
+.gridbg{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);padding:7px 11px;border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:22px;background:rgba(255,255,255,.03)}
+.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 18px var(--accent)}
+h1{font-size:clamp(54px,7.2vw,92px);line-height:.92;letter-spacing:-.065em;max-width:850px}
+.gradient{background:linear-gradient(100deg,#fff 25%,var(--accent) 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;color:var(--muted);max-width:680px;margin:26px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:13px;border:1px solid var(--line);transition:.25s;cursor:pointer}
+.btn.primary{background:var(--accent);color:#07110f;border-color:var(--accent);font-weight:800}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border-radius:30px;padding:28px;box-shadow:var(--shadow);transform:rotate(2deg);transition:.5s}
+.hero-card:hover{transform:rotate(0) translateY(-6px)}
+.card-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-bottom:35px}
+.bigword{font-size:clamp(54px,6vw,80px);font-weight:900;letter-spacing:-.07em;line-height:.9;margin-bottom:28px}
+.metric{display:flex;justify-content:space-between;padding:16px 0;border-top:1px solid var(--line);font-size:14px}
+.metric strong{color:#fff}
+section{padding:110px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}
+.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+h2{font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-.055em;margin-top:10px}
+.section-head p{color:var(--muted);max-width:430px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.service{padding:25px;border:1px solid var(--line);background:var(--card);border-radius:var(--radius);min-height:220px;transition:.3s}
+.service:hover{transform:translateY(-7px);border-color:rgba(168,255,106,.45);background:rgba(168,255,106,.06)}
+.icon{font-size:26px;margin-bottom:30px}
+.service h3{font-size:20px;margin-bottom:10px}
+.service p{font-size:14px;color:var(--muted)}
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:17px 0;color:#c9d5d0}
+.track{display:inline-block;animation:scroll 25s linear infinite}
+.track span{margin:0 22px;color:var(--accent)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.work{position:relative;min-height:350px;padding:28px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:linear-gradient(140deg,#12251f,#091411);cursor:pointer;transition:.35s}
+.work:hover{transform:translateY(-6px);border-color:rgba(168,255,106,.5)}
+.work:nth-child(2){background:linear-gradient(140deg,#15241e,#10251f)}
+.work:nth-child(3){background:linear-gradient(140deg,#101d2a,#0b151c)}
+.work:nth-child(4){background:linear-gradient(140deg,#261c12,#17110b)}
+.work .num{font-size:12px;color:var(--accent)}
+.work h3{font-size:34px;letter-spacing:-.04em;margin-top:80px}
+.work p{color:var(--muted);max-width:430px;margin-top:10px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:#c7d0cc}
+.arrow{position:absolute;right:24px;bottom:22px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:20px}
+.timeline{position:relative;display:grid;gap:14px}
+.timeline:before{content:"";position:absolute;left:116px;top:0;bottom:0;width:1px;background:var(--line)}
+.role{display:grid;grid-template-columns:95px 1fr;gap:42px;padding:18px 0}
+.year{color:var(--accent);font-size:13px;padding-top:4px}
+.rolebox{border:1px solid var(--line);background:var(--card);padding:24px;border-radius:20px}
+.rolebox h3{font-size:22px}
+.rolebox small{color:var(--muted)}
+.rolebox p{color:var(--muted);margin-top:10px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:14px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.about-copy{font-size:23px;line-height:1.45;letter-spacing:-.02em}
+.about-copy em{color:var(--accent);font-style:normal}
+.about-list{display:grid;gap:12px}
+.about-list div{border-top:1px solid var(--line);padding:15px 0;display:flex;justify-content:space-between;color:var(--muted)}
+.about-list strong{color:#fff}
+.contact{border:1px solid var(--line);background:linear-gradient(120deg,rgba(168,255,106,.13),rgba(99,230,190,.04));border-radius:32px;padding:60px;text-align:center}
+.contact h2{max-width:750px;margin:10px auto 18px}
+.contact p{color:var(--muted);max-width:580px;margin:0 auto 28px}
+footer{padding:40px 0 55px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);z-index:50;display:none;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modalbox{width:min(700px,100%);background:#0d1a17;border:1px solid var(--line);border-radius:28px;padding:32px;position:relative;box-shadow:var(--shadow)}
+.close{position:absolute;right:18px;top:18px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:#fff;cursor:pointer}
+.modalbox h3{font-size:36px;letter-spacing:-.04em;margin:12px 0}
+.modalbox p{color:var(--muted);margin-bottom:20px}
+.cursor{position:fixed;pointer-events:none;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(168,255,106,.09),transparent 65%);transform:translate(-50%,-50%);z-index:1}
+
+.ugc-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-bottom:22px}
+.ugc-copy,.ugc-note{border:1px solid var(--line);border-radius:28px;padding:32px;background:var(--card)}
+.ugc-copy h3{font-size:clamp(27px,3vw,40px);letter-spacing:-.045em;line-height:1.05;max-width:540px;margin:12px 0 15px}
+.ugc-copy p,.ugc-note p{color:var(--muted);max-width:610px}
+.ugc-note{background:linear-gradient(145deg,rgba(168,255,106,.13),rgba(255,255,255,.025));display:flex;flex-direction:column;justify-content:center}
+.ugc-note-icon{font-size:30px;color:var(--accent);margin-bottom:24px}
+.ugc-note strong{font-size:27px;line-height:1.1;letter-spacing:-.04em;margin-bottom:14px}
+.ugc-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:235px;gap:14px}
+.ugc-photo{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#13201b}
+.ugc-photo.photo-tall{grid-row:span 2}
+.ugc-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.2,.7,.2,1);filter:saturate(.94)}
+.ugc-photo:hover img{transform:scale(1.055)}
+.ugc-photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none}
+.ugc-photo figcaption{position:absolute;z-index:1;bottom:16px;left:16px;font-size:13px;font-weight:700}
+@media(max-width:900px){.ugc-intro{grid-template-columns:1fr}.ugc-gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:260px}}
+@media(max-width:600px){.ugc-copy,.ugc-note{padding:24px}.ugc-gallery{grid-auto-rows:220px;gap:10px}.ugc-photo.photo-tall{grid-row:span 1}.ugc-gallery .ugc-photo:first-child{grid-row:span 2}}
+
+@media(max-width:900px){
+  .hero-inner,.about{grid-template-columns:1fr}.hero-card{max-width:600px}
+  .services{grid-template-columns:repeat(2,1fr)}.workgrid{grid-template-columns:1fr}
+  .navlinks a:not(.navcta){display:none}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1160px)}nav{top:10px}.navcta{display:block}
+  .hero{padding-top:120px}.hero p{font-size:17px}.hero-card{padding:22px}
+  .services{grid-template-columns:1fr}section{padding:80px 0}
+  .section-head{display:block}.section-head p{margin-top:18px}.timeline:before{left:10px}
+  .role{grid-template-columns:1fr;padding-left:30px}.year{padding-top:0}
+  .contact{padding:38px 22px}footer{display:block}.footer-right{margin-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav>
+  <a class="logo" href="#top">IT<span>.</span></a>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#ugc">UGC Creator</a>
+    <a href="#experience">Experience</a>
+    <a href="#about">About</a>
+    <a class="navcta" href="#contact">Let's talk ↗</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="gridbg"></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Available for freelance projects</div>
+      <h1>Paid Media that <span class="gradient">moves people.</span></h1>
+      <p>I’m Ignacio Tolaba, a Paid Media Analyst and digital marketing professional focused on performance, audience strategy, analytics and continuous optimization.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Start a project ↗</a>
+        <a class="btn" href="#work">Explore my work ↓</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-top"><span>IGNACIO TOLABA</span><span>BA · ARG</span></div>
+      <div class="bigword">DATA<br><span class="gradient">×</span> CREATIVITY</div>
+      <div class="metric"><span>Core focus</span><strong>Paid Media</strong></div>
+      <div class="metric"><span>Platforms</span><strong>Meta · Google</strong></div>
+      <div class="metric"><span>Approach</span><strong>Test → Learn → Scale</strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track">
+  PERFORMANCE <span>✦</span> PAID MEDIA <span>✦</span> DIGITAL STRATEGY <span>✦</span> ANALYTICS <span>✦</span> AUDIENCE STRATEGY <span>✦</span> PERFORMANCE <span>✦</span> PAID MEDIA <span>✦</span> DIGITAL STRATEGY <span>✦</span> ANALYTICS <span>✦</span> AUDIENCE STRATEGY <span>✦</span>
+</div></div>
+
+<section id="services">
+<div class="container">
+  <div class="section-head">
+    <div><div class="kicker">What I do</div><h2>Marketing with a<br>performance mindset.</h2></div>
+    <p>From campaign setup to reporting, I connect strategy, creativity and data to make digital marketing more useful and more measurable.</p>
+  </div>
+  <div class="services">
+    <article class="service"><div class="icon">◉</div><h3>Paid Media</h3><p>Campaign management and optimization across Meta Ads and Google Ads, with a focus on efficiency and performance.</p></article>
+    <article class="service"><div class="icon">⌁</div><h3>Audience Strategy</h3><p>Audience research, segmentation, testing and creative hypotheses designed around real user behavior.</p></article>
+    <article class="service"><div class="icon">↗</div><h3>Analytics</h3><p>Performance analysis, KPI monitoring, reporting and actionable insights using tools such as GA4 and Looker Studio.</p></article>
+    <article class="service"><div class="icon">✦</div><h3>Digital Strategy</h3><p>Social media, content, CRM and digital strategy experience to understand paid media as part of the bigger picture.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+  <div class="section-head">
+    <div><div class="kicker">Selected focus areas</div><h2>Work that starts<br>with a question.</h2></div>
+    <p>Click a project to see how I think about the problem, the process and the marketing layer behind it.</p>
+  </div>
+  <div class="workgrid">
+    <article class="work" data-title="Paid Media & Campaign Optimization" data-copy="Managing and optimizing paid campaigns requires more than changing budgets. My approach combines performance analysis, audience testing, creative evaluation and careful iteration to understand what is actually driving results." data-tags="Meta Ads,Google Ads,Performance,KPIs">
+      <span class="num">01 / PAID MEDIA</span><h3>Campaign<br>Optimization</h3><p>From performance signals to actionable changes.</p><div class="tags"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Testing</span></div><div class="arrow">↗</div>
+    </article>
+    <article class="work" data-title="Digital Strategy & Audience Thinking" data-copy="I work from the audience backwards: who are we trying to reach, what problem are they solving, what message can move them, and what does the data tell us after launch?" data-tags="Audience Strategy,Creative,Research">
+      <span class="num">02 / STRATEGY</span><h3>Audience<br>Thinking</h3><p>Turning user behavior into clearer decisions.</p><div class="tags"><span class="tag">Audience</span><span class="tag">Creative</span><span class="tag">Research</span></div><div class="arrow">↗</div>
+    </article>
+    <article class="work" data-title="Analytics & Reporting" data-copy="I translate campaign data into a story that teams can actually use: what changed, why it matters, where the opportunity is, and what should happen next." data-tags="GA4,Looker Studio,Reporting">
+      <span class="num">03 / ANALYTICS</span><h3>Data into<br>decisions</h3><p>Reporting that helps teams act, not just look.</p><div class="tags"><span class="tag">GA4</span><span class="tag">Looker Studio</span><span class="tag">KPIs</span></div><div class="arrow">↗</div>
+    </article>
+    <article class="work" data-title="Digital Marketing Ecosystems" data-copy="My background spans paid media, social media, content strategy, email marketing, CRM and digital reporting. That broader perspective helps me connect channels instead of treating them as isolated pieces." data-tags="Social Media,CRM,Content">
+      <span class="num">04 / DIGITAL</span><h3>Beyond the<br>ad account</h3><p>Connecting paid media with the wider ecosystem.</p><div class="tags"><span class="tag">Social</span><span class="tag">CRM</span><span class="tag">Content</span></div><div class="arrow">↗</div>
+    </article>
+  </div>
+</div>
+</section>
+
+
+<section id="ugc">
+<div class="container">
+  <div class="section-head">
+    <div><div class="kicker">Creator side</div><h2>UGC that feels<br><span class="gradient">real, not scripted.</span></h2></div>
+    <p>Alongside performance marketing, I create authentic, relatable visual content for brands that want to connect with people through a human point of view.</p>
+  </div>
+  <div class="ugc-intro">
+    <div class="ugc-copy">
+      <div class="eyebrow"><span class="dot"></span> UGC Creator · Lifestyle · Fashion</div>
+      <h3>Content with a face, a feeling and a point of view.</h3>
+      <p>From lifestyle moments to fashion-forward visuals, I can help brands create content that feels natural on social media and fits the way people actually consume content.</p>
+      <div class="tags"><span class="tag">Lifestyle</span><span class="tag">Fashion</span><span class="tag">Personal care</span><span class="tag">Brand storytelling</span><span class="tag">Short-form video concepts</span></div>
+      <a class="btn primary" style="margin-top:25px" href="mailto:josetolaba00@gmail.com?subject=UGC%20Content%20Collaboration">Let's create together ↗</a>
+    </div>
+    <div class="ugc-note"><span class="ugc-note-icon">✦</span><strong>Marketing mindset.<br>Creator perspective.</strong><p>I understand both sides of the content: the story a brand wants to tell and the audience it wants to reach.</p></div>
+  </div>
+  <div class="ugc-gallery">
+    <figure class="ugc-photo photo-tall"><img src="assets/ugc-striped-shirt-day.jpeg" alt="Ignacio wearing a striped shirt in a leafy outdoor setting" loading="lazy"><figcaption>Everyday lifestyle</figcaption></figure>
+    <figure class="ugc-photo"><img src="assets/ugc-night-black-shirt.jpeg" alt="Ignacio in a black shirt in a modern night-time setting" loading="lazy"><figcaption>Night out · Lifestyle</figcaption></figure>
+    <figure class="ugc-photo"><img src="assets/ugc-white-shirt-pool.jpeg" alt="Ignacio in a white shirt beside a pool" loading="lazy"><figcaption>Travel & leisure</figcaption></figure>
+    <figure class="ugc-photo"><img src="assets/ugc-graduation.jpeg" alt="Ignacio dressed formally for a university graduation" loading="lazy"><figcaption>Formal & professional</figcaption></figure>
+    <figure class="ugc-photo"><img src="assets/ugc-striped-shirt-portrait.jpeg" alt="Portrait of Ignacio in a striped shirt" loading="lazy"><figcaption>Personal style</figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="section-head">
+    <div><div class="kicker">Experience</div><h2>A marketing path<br>built in layers.</h2></div>
+    <p>Professional experience across paid media, marketing, social media and higher education.</p>
+  </div>
+  <div class="timeline">
+    <div class="role"><div class="year">2026—NOW</div><div class="rolebox"><h3>Paid Media Analyst · Idílica Estudio</h3><small>Buenos Aires, Argentina</small><p>Paid media and digital marketing, with a focus on campaign performance, optimization, audience strategy and reporting.</p></div></div>
+    <div class="role"><div class="year">2026</div><div class="rolebox"><h3>Marketing Analyst · vittal</h3><small>Buenos Aires, Argentina</small><p>Marketing analysis and digital marketing responsibilities within a private healthcare organization.</p></div></div>
+    <div class="role"><div class="year">2021—26</div><div class="rolebox"><h3>Social Media Manager / Community Manager</h3><small>Argentina</small><p>Several years working across social media management, community building, communication and brand development.</p></div></div>
+    <div class="role"><div class="year">2024—26</div><div class="rolebox"><h3>Professor · Marketing & E-Commerce</h3><small>Universidad del Norte Santo Tomás de Aquino</small><p>Teaching E-Commerce, Social Media and marketing trends, combining practical digital knowledge with education.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+  <div><div class="kicker">A little more</div><h2>Analytical mind.<br>Creative instinct.</h2></div>
+  <div>
+    <p class="about-copy">I like understanding <em>why</em> a campaign behaves the way it does — identifying patterns, testing hypotheses and turning data into better decisions. Outside marketing, I’m also an independent musician, which has shaped my perspective on <em>storytelling, branding and connection.</em></p>
+    <div class="about-list" style="margin-top:35px">
+      <div><span>Education</span><strong>Marketing · University degree</strong></div>
+      <div><span>Additional education</span><strong>University Teaching</strong></div>
+      <div><span>Languages</span><strong>Spanish · English · Portuguese</strong></div>
+      <div><span>Based in</span><strong>Buenos Aires, Argentina</strong></div>
+    </div>
+    <div class="skills" style="margin-top:28px">
+      <span class="skill">Meta Ads</span><span class="skill">Google Ads</span><span class="skill">GA4</span><span class="skill">Looker Studio</span><span class="skill">SEO</span><span class="skill">CRM</span><span class="skill">WordPress</span><span class="skill">Social Media</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="contact">
+    <div class="kicker">Have a project?</div>
+    <h2>Let’s turn your marketing questions into better decisions.</h2>
+    <p>Tell me what you’re working on, what you’re trying to achieve and where you’re stuck. I’ll get back to you by email or WhatsApp.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn primary" href="https://wa.me/543815020964?text=Hi%20Ignacio!%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Message me on WhatsApp ↗</a>
+      <a class="btn" href="mailto:josetolaba00@gmail.com?subject=Freelance%20project%20inquiry">josetolaba00@gmail.com ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/ignacio-tolaba-b7484721a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <p style="margin:20px auto 0;color:var(--muted);font-size:14px">WhatsApp: <a href="https://wa.me/543815020964" target="_blank" rel="noopener" style="color:var(--accent)">+54 381 502-0964</a></p>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="container">
+  <div>© 2026 Ignacio Tolaba</div>
+  <div class="footer-right">Paid Media · Digital Marketing · Analytics</div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modalbox">
+    <button class="close" id="close">×</button>
+    <div class="kicker">Project approach</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalCopy"></p>
+    <div class="tags" id="modalTags"></div>
+  </div>
+</div>
+
+<script>
+const cursor=document.getElementById('cursor');
+window.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+
+const modal=document.getElementById('modal'), title=document.getElementById('modalTitle'),
+copy=document.getElementById('modalCopy'), tags=document.getElementById('modalTags');
+document.querySelectorAll('.work').forEach(card=>{
+  card.addEventListener('click',()=>{
+    title.textContent=card.dataset.title;
+    copy.textContent=card.dataset.copy;
+    tags.innerHTML=card.dataset.tags.split(',').map(t=>`<span class="tag">${t}</span>`).join('');
+    modal.classList.add('open');
+  });
+});
+document.getElementById('close').onclick=()=>modal.classList.remove('open');
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+
+// subtle reveal
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.animate(
+ [{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],
+ {duration:650,easing:'cubic-bezier(.2,.7,.2,1)',fill:'forwards'});obs.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('section .service,section .work,section .rolebox,section .about-copy').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
